@@ -1,0 +1,154 @@
+.schedule-header {
+  text-align: center; /* This centers the text horizontally */
+  display: flex; /* Using flexbox to center content */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items along the cross axis (horizontal centering for a column flex container) */
+  justify-content: center; /* Center items along the main axis (vertical centering for a column flex container) */
+  /* Add other styles like padding or background color as needed */
+}
+  
+  .time-slot {
+    width: 80%; /* Adjust this percentage to increase the width of the time slot divs */
+    padding: 10px 20px; /* Adjust as needed */
+    margin: 0 10px; /* Centers the time-slot and adds horizontal spacing */
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    border-radius: 20px; /* Adjust as needed */
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #f0f0f0; /* Your color */
+    text-align: center;
+    /* Add more styles for font, color, etc. */
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+.time-slot:hover {
+  transform: translateY(-5px); /* Move the time slot up slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow to lift the div off the page */
+}
+
+  .time-slot-row {
+    width: 75%;
+    display: flex;
+    justify-content: center; /* This will center the contents of the time-slot-row */
+    align-items: center;
+    margin: 8px 0; /* Spacing between rows */
+  }
+  
+  .time-slots-container {
+    /* overflow-y: auto;
+    height: 500px; Adjust the height as needed for your design */
+    
+    width: 100%; /* Adjust if necessary to fit your design */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center the time-slot-row */
+  }
+
+  /* .time-slot.selected {
+    /* Styles for selected time slot */
+  /* } */
+   */
+
+  .schedule-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+
+    width: 100%; /* Ensures the header takes full width */
+    padding: 0; /* Adjust as needed */
+    margin: 0 auto; /* Centers the header if there is any margin */
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Add other styles like padding or background color as needed */
+  }
+  
+  .schedule-title {
+    font-size: 24px; /* Adjust to match your mockup */
+    font-weight: bold;
+    /* Add other styles like margin as needed */
+  }
+  
+  .schedule-date {
+    font-size: 18px; /* Adjust to match your mockup */
+    /* Add other styles as needed */
+  }
+  
+  .schedule-day {
+    font-size: 18px; /* Adjust to match your mockup */
+    /* Add other styles as needed */
+  }
+
+  .schedule-day-container {
+    background-color: #fff; /* or any color you prefer */
+    padding: 10px 0; /* Adjust vertical padding as needed, horizontal padding is not necessary for full width */
+    margin: 10px 0; /* Adjust vertical margin as needed, horizontal margin set to 0 for full width */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Horizontal offset, vertical offset, blur radius, color */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; 
+    /* display: inline-block; To fit the content's width */
+    /* Add any additional styles for alignment or font here */
+  }
+  
+  .time-label {
+    margin-right: 10px; /* Spacing between the time label and the time slot */
+    white-space: nowrap; /* Ensures the text doesn't wrap */
+  }
+
+  /* .schedule-container {
+    height: 500px; /* Example height, adjust as needed for your design */
+    /* overflow-y: scroll; */
+  /* } */
+   /* */ 
+
+   
+   .scroll-container {
+    overflow-y: auto;
+    height: 500px; /* Adjust based on your design */
+    position: relative; /* Ensure that offsetTop calculations are correct */
+  }
+  
+  .time-slot-row {
+    /* Height must be consistent for correct calculations */
+    height: 50px; /* Adjust based on your design */
+    cursor: pointer; /* Indicates it's clickable */
+    user-select: none; /* Prevent text selection on click */
+  }
+
+  .time-slot:active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Inward shadow for a pressed effect */
+    transform: translateY(2px); /* Slight move down */
+  }
+
+  .time-slot.selected {
+    background-color: #e9e9e9; /* Highlight color for the selected time slot */
+  }
+
+  .day-divider {
+    border-bottom: 1px solid #ccc; /* A light grey color for the divider */
+    width: 100%; /* Make the divider stretch across the container */
+    margin: 10px 0; /* Add some vertical space around the divider */
+  }
+
+  @keyframes clickEffect {
+    0% {
+      background-color: transparent;
+    }
+    50% {
+      background-color: #dddddd; /* Temporary highlight color */
+    }
+    100% {
+      background-color: transparent;
+    }
+  }

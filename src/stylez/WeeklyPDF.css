@@ -1,0 +1,52 @@
+.weekly-workout-pdf-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;  /* Increase space below to make room for the divider */
+  position: relative; /* Required to position the pseudo-element (divider) */
+}
+
+.weekly-workout-container{
+  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  /* padding-top: 70px; */
+  position: relative;
+  
+}
+
+.weekly-workout-container::after{
+  content: '';
+  width: 80%;  /* adjust width as needed */
+  height: 2px;
+  background: #ccc;  /* color of the divider */
+  position: absolute;
+  bottom: -10px;  /* Adjusted position to push the divider further down */
+  left: 10%;  /* centers the divider */
+}
+
+
+.weekly-workout-title {
+  text-align: center;
+}
+
+.pdf-cover-image {
+  max-width: 100%; /* Ensures the image doesn't exceed the container's width */
+  border-radius: 10px; /* Optional: to give rounded edges to the image */
+  cursor: pointer; /* Changes the cursor to a hand when hovering over the image */
+  transition: transform 0.2s; /* Smoothens the hover effect */
+
+  /* Shadow styling taken from .video-container */
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4), 
+              0 15px 45px 5px rgba(0, 0, 0, 0.3);
+  background-color: #e9e9e9;  /* A light background color to aid the sunken effect */
+}
+
+.pdf-cover-image:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover for a subtle effect */
+}

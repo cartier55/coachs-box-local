@@ -1,0 +1,40 @@
+.sidebar-footer-link {
+    text-decoration: none;
+    color: inherit; 
+  }
+
+.lhYbII.toggled {
+    width: 60px !important;
+    min-width: 40px !important;
+}
+
+div.pro-sidebar{
+  position: fixed;
+}
+
+.pro-sidebar.collapsed {
+  width: 60px !important;
+  min-width: 40px !important;
+ }
+ 
+ .pro-menu-item{
+  margin-left: -7px !important;
+ }
+
+ .sidebar-footer-link{
+  transition: width 0.3s;
+  /* width: 175px; */
+  padding: 1px 15px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #adadad;
+  text-decoration: none;
+  /* margin: 0 auto; */
+  margin-left: -10px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+ }
